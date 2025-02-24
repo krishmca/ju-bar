@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/custom.css">
+    <title>Ju-Bar</title>
+</head>
+<body class="bg-gray-100 flex flex-col lg:flex-row">
+    <aside class="p-4 bg-blue-200 flex flex-col text-center lg:w-1/4 lg:h-screen">
+        <img class="h-32 w-32 self-center" src="images/logo.png" alt="Juice Bar Logo"/>
+        <h1 class="custom text-black uppercase font-large text-2xl tracking-wider pl-5 font-bold my-4">Ju-Bar</h1>
+        <ul class="space-y-4 lg:space-y-8 lg:text-center lg:my-8">
+
+            <li><a href="" class="text-gray-800 hover:text-gray-600">Products</a></li>
+            <li><a href="" class="text-gray-800 hover:text-gray-600">Orders</a><span class="text-blue-900 bg-blue-100 text-sm p-1 rounded-full">5</span></li>
+            <li><a href="" class="text-gray-800 hover:text-gray-600">Inventory</a></li>
+            <li><a href="" class="text-gray-800 hover:text-gray-600">Customers</a></li>
+            <li><a href="" class="text-gray-800 hover:text-gray-600">Analytics</a></li>
+            <li><a href="" class="text-gray-800 hover:text-gray-600">Coupons</a></li>
+        </ul>
+        <span class="text-2xl lg:text-center lg:pl-2">&#9881;</span>
+    </aside>
+    <main class="bg-gradient-to-r from-blue-100 to-red-100 lg:w-3/4 lg:p-4">
+       <div class="mt-4 flex justify-center items-center lg:justify-end"> 
+            <img class="h-8 w-8 rounded-full" src="images/logo.png"/>
+            <small class="text-blue-900 mx-4 font-large">Krish</small>
+       </div>
+       <!--------main content--------->
+       <div class="px-2 mt-8">
+            <div class="flex flex-col items-center mb-6 lg:flex-row lg:justify-between">
+                <h2 class="mb-4 lg:mb-0 lg:text-xl">All Products</h2>
+                <div>
+                    <button class="text-gray-100 bg-indigo-500 hover:bg-indigo-400 px-4 py-2 text-sm rounded">&#43; ADD</button>
+                    <select name="bulk" id="bulk" class="text-sm ml-2 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500">
+                        <option>- Bulk Actions -</option>
+                        <option>Edit</option>
+                        <option>Delete</option>
+                    </select>
+                </div>
+            </div>
+            <section class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-100">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> <input type="checkbox" class="mr-4">Item</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                            <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-100">
+                        <tr>
+                           <td class="flex items-center px-6 py-4">
+                                <input type="checkbox">
+                                <img src="images/mango.jpg" alt="Mango smoothie" class="h-10 w-10 mx-4">
+                                <p class="text-sm font-medium text-gray-500 tracking-wider whitespace-nowrap">Mango Smoothie</p>
+                           </td>
+                           <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                <span class="text-green-900 bg-green-100 px-4 py-2 rounded-full">Active</span>
+                           </td>
+                           <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                Smoothies
+                           </td>
+                           <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                            N/A
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                3.95
+                           </td>
+                           <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                            <a href="" class="text-indigo-500 hover:text-indigo-900">edit</a>
+                             </td>
+                        </tr>
+
+                        <tr>
+                            <td class="flex items-center px-6 py-4">
+                                 <input type="checkbox">
+                                 <img src="images/strawberry.jpg" alt="Strawberry smoothie" class="h-10 w-10 mx-4">
+                                 <p class="text-sm font-medium text-gray-500 tracking-wider whitespace-nowrap">Strawberry Smoothie</p>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 <span class="text-green-900 bg-green-100 px-4 py-2 rounded-full">Active</span>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 Smoothies
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             N/A
+                             </td>
+                             <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 3.95
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             <a href="" class="text-indigo-500 hover:text-indigo-900">edit</a>
+                              </td>
+                         </tr>
+
+                         <tr>
+                            <td class="flex items-center px-6 py-4">
+                                 <input type="checkbox">
+                                 <img src="images/berries.jpg" alt="Berries smoothie" class="h-10 w-10 mx-4">
+                                 <p class="text-sm font-medium text-gray-500 tracking-wider whitespace-nowrap">Berries Smoothie</p>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 <span class="text-green-900 bg-green-100 px-4 py-2 rounded-full">Active</span>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 Smoothies
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             N/A
+                             </td>
+                             <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 3.95
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             <a href="" class="text-indigo-500 hover:text-indigo-900">edit</a>
+                              </td>
+                         </tr>
+
+                         <tr>
+                            <td class="flex items-center px-6 py-4">
+                                 <input type="checkbox">
+                                 <img src="images/green.jpg" alt="Berries smoothie" class="h-10 w-10 mx-4">
+                                 <p class="text-sm font-medium text-gray-500 tracking-wider whitespace-nowrap">Green Smoothie</p>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 <span class="text-green-900 bg-green-100 px-4 py-2 rounded-full">Active</span>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 Smoothies
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             N/A
+                             </td>
+                             <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 3.95
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             <a href="" class="text-indigo-500 hover:text-indigo-900">edit</a>
+                              </td>
+                         </tr>
+
+                         <tr>
+                            <td class="flex items-center px-6 py-4">
+                                 <input type="checkbox">
+                                 <img src="images/banana.jpg" alt="Berries smoothie" class="h-10 w-10 mx-4">
+                                 <p class="text-sm font-medium text-gray-500 tracking-wider whitespace-nowrap">Banana Smoothie</p>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 <span class="text-green-900 bg-green-100 px-4 py-2 rounded-full">Active</span>
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 Smoothies
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             N/A
+                             </td>
+                             <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                                 3.95
+                            </td>
+                            <td class="text-left text-sm px-6 tracking-wider whitespace-nowrap">
+                             <a href="" class="text-indigo-500 hover:text-indigo-900">edit</a>
+                              </td>
+                         </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section class="flex flex-col items-center py-6 text-sm font-light lg:flex-row lg:justify-between">
+                <p>Showing 10 of 108 Products</p>
+                <ul class="flex mt-4 lg:mt-0">
+                    <li>
+                        <span class="mr-4">&lt;</span>
+                        <a href="" class="text-gray-100 p-2 bg-indigo-500 hover:bg-indigo-400 rounded-full">1</a>
+                    </li>
+                    <li>
+                        <a href="" class="p-2">2</a>
+                    </li>
+                    <li>
+                        <a href="" class="p-2">3</a>
+                    </li>
+                    <li>
+                        <a href="" class="p-2">4</a>
+                        <span class="ml-4">&gt;</span>
+                    </li>
+                </ul>
+            </section>
+       </div>
+    </main>
+</body>
+</html>
